@@ -11,12 +11,12 @@ mount --bind /dev/pts /mnt/dev/pts
 mount --bind /proc /mnt/proc
 mount --bind /sys /mnt/sys
 
-mount boot/efi
 
 chroot /mnt
 
+mount boot/efi
 grub-install /dev/sda
-
+umount /boot/efi
 
 exit
 
@@ -25,7 +25,6 @@ umount /mnt/dev
 umount /mnt/proc
 umount /mnt/sys
 umount /mnt
-umount /boot/efi
 
 reboot
 ```
