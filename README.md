@@ -1,9 +1,11 @@
 # grub-install
 
 
-`sudo su`
 
-```mount /dev/sda1 /mnt
+```
+sudo su
+
+mount /dev/sda1 /mnt
 mount --bind /dev /mnt/dev
 mount --bind /dev/pts /mnt/dev/pts
 mount --bind /proc /mnt/proc
